@@ -1,0 +1,46 @@
+{% extends 'adminbase.html' %}
+
+
+{% block admincontent %}
+<div class="table-responsive" style="width: 1000px;margin-left: 250px;margin-top: 50px;
+    color: white;font-family: calibri;border: 2px solid white;font-size: 20px;">
+    <table class="table ">
+        <thead>
+            <h3 class="text-center" style="font-weight: bolder;font-size: 30px;" >Student Approval</h3>
+            <tr style="background-color:darkslategrey;color: white;font-size: 20px;" >
+                <th scope="col">Student Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for i in value  %}
+                
+            <tr class="" style="font-weight: bold;font-size: 20px;">
+                <td scope="row">{{i.username}}</td>
+                <td></td>
+                <td>block</td>
+                <td>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="user_id" value="{{i.id}}">
+                        <!-- <a href="" style="color: green;" type="submit">Approve</a> -->
+                         <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/studrej" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="us_id" value="{{i.id}}">
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock admincontent %}

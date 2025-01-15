@@ -1,0 +1,35 @@
+{% extends 'studentbase.html' %}
+
+
+{% block studcontent %}
+    
+
+    
+<div class="table-responsive" style="width: 1000px;margin-left: 250px;margin-top: 50px;
+    color: white;font-family: calibri;border: 2px solid white;font-size: 20px;">
+    <table class="table table-primary">   
+        
+        <thead>
+            <h3 class="text-center" style="font-weight: bolder;font-size: 30px;">All Teachers Details</h3>
+            <tr style="background-color:darkslategrey;color: white;font-size: 20px;">
+                <th scope="col">Fisrt Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for i in val  %}
+                
+            
+                
+            <tr class="" style="font-weight: bold;font-size: 20px;">
+                <td scope="row">{{i.firstname}}</td>
+                <td>{{i.lastname}}</td>
+                <td>{{i.emailid}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock studcontent %}

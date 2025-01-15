@@ -1,0 +1,30 @@
+{% extends 'basehome.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+  
+
+  
+<div class="login-page">
+  <h2>Registration Form</h2>
+  <div class="form">
+    <form action="/updstudent/{{val.id}}" class="login-form" method="post">
+      {% csrf_token %}
+      <input type="text" placeholder="name" required name="fname" value="{{val.name}}">
+      <input type="email" placeholder="email" required name="email" value="{{val.emailad}}">
+      <input type="number" placeholder="phone number" required name="phone" value="{{val.phoneno}}">
+      <input type="number" placeholder="age" required name="age"value="{{val.age}}" >
+      <input type="text" placeholder="department" required name="dept" value="{{val.department}}">
+      <input type="text" placeholder="username" required name="uname"value="{{val.studuser}}" />
+      <input type="password" placeholder="password" required name="pwd" value="{{val.studpwd}}"/>
+      <input type="password" placeholder="password" required name="cpwd" value="{{val.studpwd}}">
+      <button type="submit">update</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'basehome.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock css %}
+  
+
+{% block content %}
+  
+
+  
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" method="post">
+      {% csrf_token %}
+      <input type="text" placeholder="username" required name="sname"/>
+      <input type="password" placeholder="password" required name="spwd"/>
+      <button type="submit" style="font-weight: bolder;">login</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

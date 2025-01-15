@@ -1,0 +1,105 @@
+
+
+/* Background and center alignment */
+
+/* Main form container */
+.login-page {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    margin-left: 525px;margin-top: 50px;
+    
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+    font-size: 34px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Form styling */
+.form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1a3f4f;
+    box-shadow: 0 0 10px rgba(254, 180, 123, 0.5);
+}
+
+button {
+    background-color: #1a3f4f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #456370;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-page {
+        width: 90%;
+        padding: 20px;
+    }
+}
+label{
+    font-family: calibri;
+    font-size: 20px;
+}
+.profile{
+    width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s ease;
+    margin-left: 30px;
+}
+a.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a3f4f;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    width: 100%;
+    margin-left: -18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+a.btn:hover{
+    background-color: #456370;
+}

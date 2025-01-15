@@ -1,0 +1,38 @@
+{% extends 'adminbase.html' %}
+
+
+{% block admincontent %}
+    
+<div class="table-responsive" style="width: 1000px;margin-left: 250px;margin-top: 50px;
+    color: white;font-family: calibri;border: 2px solid white;font-size: 20px;">
+    <table class="table ">
+        <thead>
+            <h3 class="text-center" style="font-weight: bolder;font-size: 30px;">All Student Details</h3>
+            <tr style="background-color:darkslategrey;color: white;font-size: 20px;" >
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Department</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email ID</th>
+                <th scope="col">Username</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in val  %}
+            <tr class="" style="font-weight: bold;font-size: 20px;">
+                <td scope="row">{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.department}}</td>
+                <td>{{i.phoneno}}</td>
+                <td>{{i.emailad}}</td>
+                <td>{{i.studuser}}</td>
+                <td><a href="ed/{{i.id}}" style="color: #0a3141;text-decoration: none;">edit</a></td>
+                <td><a href="del/{{i.id}}" style="color: red;text-decoration: none;">delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock admincontent %}

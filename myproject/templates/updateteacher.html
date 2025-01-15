@@ -1,0 +1,28 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+
+{% block adcss %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+    
+{% endblock adcss %}
+
+    
+{% block admincontent %}
+    
+
+    
+<div class="login-page">
+    <div class="form">
+      <form action="/updteacher/{{val.id}}" class="login-form" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="first name" required name="fname" value="{{val.firstname}}"/>
+        <input type="text" placeholder="lastname" required name="lname" value="{{val.lastname}}"/>
+        <input type="text" placeholder="username" required name="uname" value="{{val.username}}">
+        <input type="text" placeholder="email address" required name="email" value="{{val.emailid}}">
+        <input type="password" placeholder="password" required name="pwd" value="{{val.password}}">
+        <input type="password" placeholder="confirm password" name="cpwd" value="{{val.password}}">
+        <button type="submit">update</button>
+      </form>
+    </div>
+</div>
+{% endblock admincontent %}

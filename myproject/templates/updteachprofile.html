@@ -1,0 +1,40 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+
+{% block teachercss %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock teachercss %}
+
+
+{% block teachercontent %}
+  
+
+  
+<div class="login-page">
+  <h2>Edit your Profile</h2>
+  <div class="form">
+    <form action="/updtpr/{{tedprs.id}}" class="login-form" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+            <td><label for="">First Name</label></td>
+            <td><input class="profile" type="text" placeholder="first name" required name="fname" value="{{tedprs.firstname}}"></td>
+        </tr>
+        <tr>
+            <td><label for="">Last Name</label></td>
+            <td><input class="profile" type="text" placeholder="last name" required name="lname" value="{{tedprs.lastname}}"></td>
+        </tr>
+        <tr>
+            <td><label for="">Email ID</label></td>
+            <td><input class="profile" type="email" placeholder="email" required name="email" value="{{tedprs.emailid}}" ></td>
+        </tr>
+      </table>
+      <!-- <input type="text" placeholder="username" required name="uname"/>
+      <input type="password" placeholder="password" required name="pwd"/>
+      <input type="password" placeholder="password" required name="cpwd"> -->
+      <button type="submit" style="width: 330px;font-weight: bolder;">Update</button>
+    </form>
+    
+  </div>
+</div>
+{% endblock teachercontent %}

@@ -1,0 +1,26 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+{% block teachercss %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock teachercss %}
+    
+
+{% block teachercontent %}
+    
+
+    
+<div class="hometext">
+    <h1>Welcome  {{val.firstname}} {{val.lastname}}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
+        est laborum.</p>
+    <form action="/teachproview/{{val.id}}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="tviewid" value="{{val.id}}">    
+        <button style="font-weight: bolder;" type="submit">View Profile</button>
+    </form>    
+</div>
+{% endblock teachercontent %}

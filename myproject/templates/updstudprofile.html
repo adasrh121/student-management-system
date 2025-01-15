@@ -1,0 +1,48 @@
+{% extends 'studentbase.html' %}
+{% load static %}
+
+{% block studcss %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock studcss %}
+
+
+{% block studcontent %}
+  
+
+  
+<div class="login-page" style="width: 500px;">
+  <h2>Edit your Profile</h2>
+  <div class="form">
+    <form action="/updpr/{{edprs.id}}" class="login-form" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+            <td><label for="">Name</label></td>
+            <td><input class="profile" type="text" placeholder="name" required name="fname" value="{{edprs.name}}"></td>
+        </tr>
+        <tr>
+            <td><label for="">Email ID</label></td>
+            <td><input class="profile" type="email" placeholder="email" required name="email" value="{{edprs.emailad}}"></td>
+        </tr>
+        <tr>
+            <td><label for="">Phone Number</label></td>
+            <td><input class="profile" type="number" placeholder="phone number" required name="phone" value="{{edprs.phoneno}}" ></td>
+        </tr>
+        <tr>
+            <td><label for="">Age</label></td>
+            <td><input class="profile" type="number" placeholder="age" required name="age" value="{{edprs.age}}"></td>
+        </tr>
+        <tr>
+            <td><label for="">Department</label></td>
+            <td><input class="profile" type="text" placeholder="department" required name="dept" value="{{edprs.department}}"></td>
+        </tr>
+      </table>
+      <!-- <input type="text" placeholder="username" required name="uname"/>
+      <input type="password" placeholder="password" required name="pwd"/>
+      <input type="password" placeholder="password" required name="cpwd"> -->
+      <button type="submit" style="font-weight: bolder;">Update</button>
+    </form>
+    
+  </div>
+</div>
+{% endblock studcontent %}

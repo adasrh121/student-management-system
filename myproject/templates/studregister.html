@@ -1,0 +1,35 @@
+{% extends 'basehome.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/logstyle1.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+  
+
+  
+<div class="login-page">
+  <h2>Registration Form</h2>
+  <div class="form">
+    <form class="login-form" method="post" onsubmit="showsuccessalert()">
+      {% csrf_token %}
+      <input type="text" placeholder="name" required name="fname">
+      <input type="email" placeholder="email" required name="email">
+      <input type="number" placeholder="phone number" required name="phone">
+      <input type="number" placeholder="age" required name="age">
+      <input type="text" placeholder="department" required name="dept">
+      <input type="text" placeholder="username" required name="uname"/>
+      <input type="password" placeholder="password" required name="pwd"/>
+      <input type="password" placeholder="password" required name="cpwd">
+      <button type="submit" style="font-weight: bolder;">register</button>
+    </form>
+  </div>
+</div>
+<script>
+  function showsuccessalert(){
+    alert("Registration successfull");
+  }
+</script>
+{% endblock content %}

@@ -1,0 +1,48 @@
+*{
+    text-decoration: none;
+}
+body{
+    background: url("../images/sm_background.jpg");margin: 0;
+    /* display: flex; */
+    color: #fff;
+}
+.navbar1{
+    background: #1a3f4f; font-family: calibri;
+    display: flex;justify-content: space-between;
+}
+.navbar{
+    background: #1a3f4f; font-family: calibri;
+    /* display: flex;justify-content: space-between; */
+}
+.logo{
+    font-family: calibri;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    font-weight: bolder;
+    
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+.navdiv1{
+    display: flex; align-items: center;justify-content: end;
+}
+body .navdiv{
+    display: flex; align-items: center;justify-content: center;text-decoration: none;
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+.hometext{
+    color: white; font-family: calibri;font-size: xx-large;margin-left: 300px;
+    margin-top: 150px;width: 500px ;
+}
+.hometext p{
+    font-family: calibri; font-size: medium;
+}
